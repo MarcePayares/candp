@@ -44,10 +44,10 @@ const AboutPage = () => {
             <div className="text-center">
                 <h3 className="text-3xl font-bold text-indigo-600 mb-4">Our Values</h3>
                 <ul className="text-lg text-gray-600 space-y-2">
-                <li>✔️ Customer-first Approach</li>
-                <li>✔️ Innovation at the Core</li>
-                <li>✔️ Integrity in Every Step</li>
-                <li>✔️ Building Trust through Collaboration</li>
+                <li>Customer-first Approach</li>
+                <li>Innovation at the Core</li>
+                <li>Integrity in Every Step</li>
+                <li>Building Trust through Collaboration</li>
                 </ul>
             </div>
             </div>
@@ -93,7 +93,7 @@ const AboutPage = () => {
         <section className="py-16 px-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center">
             <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Want to Join Us?</h2>
-            <p className="text-lg mb-6">We're always looking for passionate people to join our team and help make an impact.</p>
+            <p className="text-lg mb-6">We&apos;re always looking for passionate people to join our team and help make an impact.</p>
             <a href="/contact" className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100">
                 Contact Us
             </a>
