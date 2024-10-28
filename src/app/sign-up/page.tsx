@@ -14,7 +14,10 @@ const SignUp = () => {
     try {
         const res = await createUserWithEmailAndPassword(email, password)
         console.log({res})
-        sessionStorage.setItem('user', 'true')
+        
+        if (typeof window !== 'undefined') {
+          window.sessionStorage.setItem('user', 'true')
+        }
         setEmail('');
         setPassword('')
 

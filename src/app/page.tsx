@@ -14,8 +14,11 @@ export default function Home() {
 
   const [user] = useAuthState(auth);
   const router = useRouter()
-  const userSession = sessionStorage.getItem('user');
- 
+  let userSession = null;
+  if (typeof window !== 'undefined') {
+    userSession = window.sessionStorage.getItem('user');
+  }
+  
   if (!user && !userSession){
     router.push('/sign-up')
   }
