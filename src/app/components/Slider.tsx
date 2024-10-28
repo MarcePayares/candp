@@ -42,6 +42,8 @@ const Slider = () => {
               src={slides[currentSlide].image}
               alt={slides[currentSlide].title}
               className="w-full h-full object-cover"
+              width={800}
+              height={800}
             />
           </div>
 

@@ -4,7 +4,6 @@ import React from 'react';
 const Gallery = () => {
   const images = [
     '/ceja1.jpeg',
-    '/ceja3.jpeg',
     '/ceja4.jpeg',
     '/ceja6.jpeg',
     '/pestaña1.jpeg',
@@ -23,6 +22,8 @@ const Gallery = () => {
               src={image}
               alt={`Gallery ${index + 1}`}
               className="w-full h-full object-cover"
+              width={800}
+              height={800}
             />
           </div>
         ))}
