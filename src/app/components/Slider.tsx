@@ -1,8 +1,8 @@
 // src/Slider.js
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const Slider = () => {
-  // Array of slides with image and text
   const slides = [
     {
       image: '/ceja3.jpeg',
@@ -38,7 +38,7 @@ const Slider = () => {
         <div className="flex flex-col md:flex-row h-full">
           {/* Image section (left) */}
           <div className="md:w-1/2 w-full h-full">
-            <img
+            <Image
               src={slides[currentSlide].image}
               alt={slides[currentSlide].title}
               className="w-full h-full object-cover"
