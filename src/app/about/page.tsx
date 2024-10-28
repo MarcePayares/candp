@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from "next/image";
+
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -58,7 +60,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                 {/* Team Member 1 */}
                 <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-                <img src="https://via.placeholder.com/150" alt="Team Member 1" className="w-32 h-32 mx-auto rounded-full mb-4" />
+                <Image width={100} height={100} src="https://via.placeholder.com/150" alt="Team Member 1" className="w-32 h-32 mx-auto rounded-full mb-4" />
                 <h3 className="text-xl font-bold text-gray-800">John Doe</h3>
                 <p className="text-indigo-600">CEO & Founder</p>
                 <p className="mt-3 text-gray-500">
@@ -67,7 +69,7 @@ const AboutPage = () => {
                 </div>
                 {/* Team Member 2 */}
                 <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-                <img src="https://via.placeholder.com/150" alt="Team Member 2" className="w-32 h-32 mx-auto rounded-full mb-4" />
+                <Image width={100} height={100} src="https://via.placeholder.com/150" alt="Team Member 2" className="w-32 h-32 mx-auto rounded-full mb-4" />
                 <h3 className="text-xl font-bold text-gray-800">Jane Smith</h3>
                 <p className="text-indigo-600">Chief Operating Officer</p>
                 <p className="mt-3 text-gray-500">
@@ -76,7 +78,7 @@ const AboutPage = () => {
                 </div>
                 {/* Team Member 3 */}
                 <div className="bg-white p-8 shadow-lg rounded-lg text-center">
-                <img src="https://via.placeholder.com/150" alt="Team Member 3" className="w-32 h-32 mx-auto rounded-full mb-4" />
+                <Image width={100} height={100} src="https://via.placeholder.com/150" alt="Team Member 3" className="w-32 h-32 mx-auto rounded-full mb-4" />
                 <h3 className="text-xl font-bold text-gray-800">Michael Brown</h3>
                 <p className="text-indigo-600">Chief Technology Officer</p>
                 <p className="mt-3 text-gray-500">
