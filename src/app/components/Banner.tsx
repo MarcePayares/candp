@@ -1,4 +1,5 @@
 // src/Banner.js
+import Link from 'next/link';
 import React from 'react';
 
 const Banner = () => {
@@ -16,9 +17,9 @@ const Banner = () => {
         <p className="text-lg md:text-xl text-gray-200 mb-6">
             Obtenga hasta un 50% de descuento si agenda su cita antes del 31 de diciembre
         </p>
-        <button className="bg-indigo-600 text-white px-6 py-3 rounded-md text-lg hover:bg-indigo-700">
+        <Link href={'/schedule'} className="bg-indigo-600 text-white px-6 py-3 rounded-md text-lg hover:bg-indigo-700">
           Agendar cita
-        </button>
+        </Link>
       </div>
     </div>
   );

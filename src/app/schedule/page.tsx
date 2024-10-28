@@ -3,7 +3,23 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
+import {useAuthState} from 'react-firebase-hooks/auth'
+import {auth} from '@/app/firebase/config'
+import { useRouter } from 'next/navigation';
+
 const ScheduleForm = () => {
+
+  const [user] = useAuthState(auth);
+  const router = useRouter()
+
+  let userSession = null;
+  if (typeof window !== 'undefined') {
+    userSession = window.sessionStorage.getItem('user');
+  }
+  
+  if (!user && !userSession){
+    router.push('/sign-up')
+  }
   // State to hold form data
   const [formData, setFormData] = useState({
     name: '',

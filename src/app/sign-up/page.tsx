@@ -4,6 +4,7 @@ import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth'
 import {auth} from '@/app/firebase/config'
 
 import Image from "next/image";
+import Link from 'next/link';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +15,7 @@ const SignUp = () => {
     try {
         const res = await createUserWithEmailAndPassword(email, password)
         console.log({res})
-        
+
         if (typeof window !== 'undefined') {
           window.sessionStorage.setItem('user', 'true')
         }
@@ -27,16 +28,18 @@ const SignUp = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900">
       <div className="bg-gray-800 p-10 rounded-lg shadow-xl w-96">
-        <Image
-            className="dark:invert m-auto mb-4"
-            src="/logovm.png"
-            alt="vm logo"
-            width={50}
-            height={38}
-            priority
-        />
+        <Link href={'/'}>
+          <Image
+              className="dark:invert m-auto mb-4"
+              src="/logovm.png"
+              alt="vm logo"
+              width={50}
+              height={38}
+              priority
+          />
+        </Link>
         <h1 className="text-white text-2xl mb-5 text-center">Registro</h1>
         <input 
           type="email" 
@@ -54,11 +57,13 @@ const SignUp = () => {
         />
         <button 
           onClick={handleSignUp}
-          className="w-full p-3 bg-indigo-600 rounded text-white hover:bg-indigo-500"
+          className="w-full p-3 bg-indigo-600 rounded text-white hover:bg-indigo-500 mb-4"
         >
-          Sign Up
+          Registrar
         </button>
+        <p className='text-sm'>Si ya tiene una cuenta puede ingresar y agendar su servicio aqui. <Link href={'/sign-in'} className='text-indigo-600 font-bold'>Ingreso</Link></p>
       </div>
+     
     </div>
   );
 };
