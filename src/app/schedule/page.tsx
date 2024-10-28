@@ -14,6 +14,7 @@ const ScheduleForm = () => {
   });
 
   // Handle form input changes
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const handleChange = (e: any) => {
     setFormData({
       ...formData,
@@ -22,6 +23,7 @@ const ScheduleForm = () => {
   };
 
   // Handle form submission
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log('Form data:', formData);
