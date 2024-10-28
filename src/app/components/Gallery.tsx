@@ -1,4 +1,5 @@
 // src/Gallery.js
+import Image from 'next/image';
 import React from 'react';
 
 const Gallery = () => {
@@ -19,7 +20,7 @@ const Gallery = () => {
       <div className="flex overflow-x-scroll space-x-4 px-4">
         {images.map((image, index) => (
           <div key={index} className="flex-shrink-0 w-80 h-60 bg-gray-200 rounded-lg overflow-hidden">
-            <img
+            <Image
               src={image}
               alt={`Gallery ${index + 1}`}
               className="w-full h-full object-cover"
